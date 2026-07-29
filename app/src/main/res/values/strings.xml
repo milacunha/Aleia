@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Aleia</string>
+    <string name="filter_genre">filtrar\ngênero</string>
+    <string name="suggestion_accepted">Aceitar sugestão</string>
 </resources>
