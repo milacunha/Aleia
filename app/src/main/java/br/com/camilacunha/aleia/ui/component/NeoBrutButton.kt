@@ -1,0 +1,103 @@
+package br.com.camilacunha.aleia.ui.component
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.DpOffset
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import br.com.camilacunha.aleia.R
+import br.com.camilacunha.aleia.ui.theme.AleiaTheme
+import br.com.camilacunha.aleia.ui.theme.Black
+import br.com.camilacunha.aleia.ui.theme.PurpleNeo
+import br.com.camilacunha.aleia.ui.theme.YellowNeo
+
+@Composable
+fun NeoBrutButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    text: String,
+    fontSize: TextUnit,
+    backgroundColor: Color,
+    borderColor: Color = Black,
+    textColor: Color = Black,
+    shadowColor: Color = PurpleNeo,
+    shadowBorderColor: Color = PurpleNeo,
+    borderWidth: Dp = 3.dp,
+    shadowOffset: DpOffset = DpOffset(6.dp, 6.dp),
+    fontFamily: FontFamily,
+    fontWeight: FontWeight,
+    letterSpacing: TextUnit
+) {
+    Box(
+        modifier = modifier.clickable { onClick() },
+        contentAlignment = Alignment.Center
+    ) {
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .offset(shadowOffset.x, shadowOffset.y)
+                .background(shadowColor)
+                .border(borderWidth, shadowBorderColor)
+        )
+
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .background(backgroundColor)
+                .border(borderWidth, borderColor),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                fontFamily = fontFamily,
+                fontWeight = fontWeight,
+                letterSpacing = letterSpacing,
+                text = text.uppercase(),
+                color = textColor,
+                fontSize = fontSize,
+                textAlign = TextAlign.Center
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun NeoBrutButtonPreview() {
+    AleiaTheme {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            NeoBrutButton(
+                onClick = {},
+                modifier = Modifier.size(200.dp, 70.dp),
+                text = "Aceitar Sugestão",
+                fontSize = 24.sp,
+                backgroundColor = YellowNeo,
+                fontFamily = FontFamily(Font(R.font.space_grotesk)),
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 2.sp
+            )
+        }
+    }
+}

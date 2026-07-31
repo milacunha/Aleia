@@ -1,8 +1,6 @@
 package br.com.camilacunha.aleia.ui.screen
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,11 +11,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -35,12 +28,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.camilacunha.aleia.R
+import br.com.camilacunha.aleia.ui.component.NeoBrutButton
+import br.com.camilacunha.aleia.ui.component.NeoBrutCover
 import br.com.camilacunha.aleia.ui.theme.AquaNeo
 import br.com.camilacunha.aleia.ui.theme.Background
-import br.com.camilacunha.aleia.ui.theme.Black
-import br.com.camilacunha.aleia.ui.theme.DarkGray
-import br.com.camilacunha.aleia.ui.theme.LightGray
-import br.com.camilacunha.aleia.ui.theme.White
 import br.com.camilacunha.aleia.ui.theme.YellowNeo
 
 @Composable
@@ -79,135 +70,53 @@ fun BookScreenContent(
             }
         }
 
-        Box(
-            modifier = Modifier
-                .size(280.dp, 480.dp)
-                .background(White)
-                .border(
-                    width = 3.dp,
-                    color = Black,
-                ),
-            contentAlignment = Alignment.Center
-        ) {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Box(
-                    modifier = Modifier
-                        .size(200.dp, 280.dp)
-                        .background(LightGray)
-                        .border(
-                            width = 3.dp,
-                            color = Black,
-                        ),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "CAPA DO LIVRO".uppercase(),
-                        fontSize = 12.sp,
-                        color = DarkGray,
-                        fontFamily = FontFamily(Font(R.font.inter)),
-                        fontWeight = FontWeight.Medium
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(16.dp))
-
-                Text(
-                    text = "O NOME DO VENTO".uppercase(),
-                    fontSize = 32.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 2.sp,
-                    textAlign = TextAlign.Center
-                )
-
-                Spacer(modifier = Modifier.height(4.dp))
-
-                Text(
-                    text = "FANTASIA".uppercase(),
-                    fontSize = 18.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 2.sp,
-                )
-            }
-        }
+        NeoBrutCover(
+            bookTitleText = "O nome do vento",
+            bookGenreText = "fantasia",
+            bookCover = null
+        )
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        Button(
+        NeoBrutButton(
+            modifier = Modifier.size(300.dp, 70.dp),
             onClick = onClick,
+            text = stringResource(R.string.suggestion_accepted).uppercase(),
+            fontSize = 18.sp,
+            fontFamily = FontFamily(Font(R.font.space_grotesk)),
+            fontWeight = FontWeight.Bold,
+            letterSpacing = 2.sp,
+            backgroundColor = YellowNeo
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Row(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(0.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = YellowNeo,
-                contentColor = Black
-            ),
-            border = BorderStroke(
-                width = 3.dp,
-                color = Black
-            )
+            horizontalArrangement = Arrangement.SpaceAround,
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = stringResource(R.string.suggestion_accepted).uppercase(),
-                fontSize = 18.sp,
+            NeoBrutButton(
+                modifier = Modifier.size(100.dp, 70.dp),
+                onClick = {},
+                text = stringResource(R.string.filter_genre).uppercase(),
+                fontSize = 14.sp,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
                 fontWeight = FontWeight.Bold,
                 letterSpacing = 2.sp,
+                backgroundColor = AquaNeo
             )
-        }
 
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Row(
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Button(
-                onClick = { },
-                modifier = Modifier.wrapContentSize(),
-                shape = RoundedCornerShape(0.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = AquaNeo,
-                    contentColor = Black
-                ),
-                border = BorderStroke(
-                    width = 3.dp,
-                    color = Black
-                )
-            ) {
-                Text(
-                    text = stringResource(R.string.filter_genre).uppercase(),
-                    fontSize = 14.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 2.sp,
-                )
-            }
-
-            Spacer(modifier = Modifier.width(24.dp))
-
-            Button(
-                onClick = { },
-                modifier = Modifier.wrapContentSize(),
-                shape = RoundedCornerShape(0.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = AquaNeo,
-                    contentColor = Black
-                ),
-                border = BorderStroke(
-                    width = 3.dp,
-                    color = Black
-                )
-            ) {
-                Text(
-                    text = "+", fontSize = 24.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 2.sp,
-                )
-            }
+            NeoBrutButton(
+                modifier = Modifier.size(70.dp, 70.dp),
+                onClick = {},
+                text = "+",
+                fontSize = 24.sp,
+                fontFamily = FontFamily(Font(R.font.space_grotesk)),
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 2.sp,
+                backgroundColor = AquaNeo
+            )
         }
     }
 }
