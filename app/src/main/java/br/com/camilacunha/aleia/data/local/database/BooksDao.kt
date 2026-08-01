@@ -13,5 +13,8 @@ interface BooksDao {
     suspend fun insertBook(book: BookEntity): Long //-1 se ignorado
 
     @Query("SELECT * FROM books WHERE isRead is 0")
-    suspend fun getAllBooks(): List<BookEntity>
+    suspend fun getAllUnreadBooks(): List<BookEntity>
+
+    @Query("UPDATE books SET isRead = 1 WHERE id = :bookId")
+    suspend fun markAsRead(bookId: Int)
 }

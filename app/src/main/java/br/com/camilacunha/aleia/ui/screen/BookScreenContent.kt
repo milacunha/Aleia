@@ -18,6 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
@@ -36,7 +37,13 @@ import br.com.camilacunha.aleia.ui.theme.YellowNeo
 
 @Composable
 fun BookScreenContent(
-    onClick: () -> Unit
+    bookTitle: String,
+    bookGenre: String,
+    bookCover: Painter?,
+    onTryAgain: () -> Unit,
+    onAccepted: () -> Unit,
+    onFilter: () -> Unit,
+    onAddBook: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -60,7 +67,7 @@ fun BookScreenContent(
             )
 
             IconButton(
-                onClick = { },
+                onClick = onTryAgain,
                 modifier = Modifier.align(Alignment.CenterEnd)
             ) {
                 Icon(
@@ -71,16 +78,16 @@ fun BookScreenContent(
         }
 
         NeoBrutCover(
-            bookTitleText = "O nome do vento",
-            bookGenreText = "fantasia",
-            bookCover = null
+            bookTitleText = bookTitle,
+            bookGenreText = bookGenre,
+            bookCover = bookCover
         )
 
         Spacer(modifier = Modifier.height(32.dp))
 
         NeoBrutButton(
             modifier = Modifier.size(300.dp, 70.dp),
-            onClick = onClick,
+            onClick = onAccepted,
             text = stringResource(R.string.suggestion_accepted).uppercase(),
             fontSize = 18.sp,
             fontFamily = FontFamily(Font(R.font.space_grotesk)),
@@ -98,7 +105,7 @@ fun BookScreenContent(
         ) {
             NeoBrutButton(
                 modifier = Modifier.size(100.dp, 70.dp),
-                onClick = {},
+                onClick = onFilter,
                 text = stringResource(R.string.filter_genre).uppercase(),
                 fontSize = 14.sp,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
@@ -109,7 +116,7 @@ fun BookScreenContent(
 
             NeoBrutButton(
                 modifier = Modifier.size(70.dp, 70.dp),
-                onClick = {},
+                onClick = onAddBook,
                 text = "+",
                 fontSize = 24.sp,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
@@ -126,7 +133,13 @@ fun BookScreenContent(
 fun PreviewBookSelectionScreen() {
     MaterialTheme {
         BookScreenContent(
-            onClick = {}
+            bookTitle = "O nome do vento",
+            bookGenre = "fantasia",
+            bookCover = null,
+            onTryAgain = {},
+            onAccepted = {},
+            onFilter = {},
+            onAddBook = {}
         )
     }
 }

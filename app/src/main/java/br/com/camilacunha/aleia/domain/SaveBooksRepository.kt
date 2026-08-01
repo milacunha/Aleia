@@ -5,5 +5,6 @@ import br.com.camilacunha.aleia.domain.model.Book
 
 interface SaveBooksRepository {
     suspend fun addBook(book: Book): AddBookResult
-    suspend fun getAllBooks(): List<Book>
+    suspend fun getAllUnreadBooks(): List<Book>
+    suspend fun markAsRead(bookId: Int)
 }

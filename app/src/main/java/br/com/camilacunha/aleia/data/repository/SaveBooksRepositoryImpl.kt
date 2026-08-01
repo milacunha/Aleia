@@ -29,7 +29,11 @@ class SaveBooksRepositoryImpl(
         }
     }
 
-    override suspend fun getAllBooks(): List<Book> {
-        return bookDao.getAllBooks().map { it.toDomain() }
+    override suspend fun getAllUnreadBooks(): List<Book> {
+        return bookDao.getAllUnreadBooks().map { it.toDomain() }
+    }
+
+    override suspend fun markAsRead(bookId: Int) {
+        bookDao.markAsRead(bookId)
     }
 }
