@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -89,8 +90,9 @@ fun NeoBrutCover(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Text(
+                    modifier = Modifier.padding(horizontal = 8.dp),
                     text = bookTitleText.uppercase(),
-                    fontSize = 32.sp,
+                    fontSize = 28.sp,
                     fontFamily = FontFamily(Font(R.font.space_grotesk)),
                     fontWeight = FontWeight.Bold,
                     letterSpacing = 2.sp,
