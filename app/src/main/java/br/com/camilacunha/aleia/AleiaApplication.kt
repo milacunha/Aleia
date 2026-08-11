@@ -2,6 +2,8 @@ package br.com.camilacunha.aleia
 
 import android.app.Application
 import br.com.camilacunha.aleia.di.appModule
+import br.com.camilacunha.aleia.di.networkModule
+import br.com.camilacunha.aleia.di.repositoryModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 
@@ -10,7 +12,11 @@ class AleiaApplication : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@AleiaApplication)
-            modules(appModule)
+            modules(
+                appModule,
+                networkModule,
+                repositoryModule
+            )
         }
     }
 }

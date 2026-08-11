@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.ui.component.NeoBrutButton
 import br.com.camilacunha.aleia.ui.component.NeoBrutCover
+import br.com.camilacunha.aleia.ui.theme.AleiaTheme
 import br.com.camilacunha.aleia.ui.theme.AquaNeo
 import br.com.camilacunha.aleia.ui.theme.Background
 import br.com.camilacunha.aleia.ui.theme.YellowNeo
@@ -134,7 +134,7 @@ fun BookScreenContent(
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun PreviewBookSelectionScreen() {
-    MaterialTheme {
+    AleiaTheme {
         BookScreenContent(
             bookTitle = "O nome do vento",
             bookGenre = "fantasia",

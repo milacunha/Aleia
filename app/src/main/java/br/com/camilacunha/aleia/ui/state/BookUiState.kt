@@ -1,4 +1,4 @@
-package br.com.camilacunha.aleia.ui
+package br.com.camilacunha.aleia.ui.state
 
 import br.com.camilacunha.aleia.domain.model.Book
 

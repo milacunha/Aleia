@@ -3,7 +3,9 @@ package br.com.camilacunha.aleia.ui
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import br.com.camilacunha.aleia.ui.screen.AddBookBottomSheet
 import br.com.camilacunha.aleia.ui.screen.BookScreenContent
+import br.com.camilacunha.aleia.ui.state.BookUiState
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -14,7 +16,7 @@ fun BookScreen() {
 
     when (uiState) {
         is BookUiState.Loading -> {
-            // Mostrar loading
+            /* TODO("tela de loading") */
         }
 
         is BookUiState.Success -> {
@@ -23,17 +25,18 @@ fun BookScreen() {
             BookScreenContent(
                 bookTitle = book.title,
                 bookGenre = book.genre.orEmpty(),
-                bookCover = null,
+                bookCover = null, /* TODO */
                 onTryAgain = { viewModel.randomizeAgain() },
                 onAccepted = { viewModel.acceptSuggestion() },
-                onFilter = { /* TODO() */ },
-                onAddBook = { /* TODO() */ viewModel.addMockBooks() }
+                onFilter = { /* TODO() */ viewModel.addMockBooks() },
+                onAddBook = { viewModel.showAddSheet() }
             )
         }
 
         is BookUiState.Empty,
         is BookUiState.Error -> {
             val message = (uiState as BookUiState.Empty).message
+            /* TODO("tela de erro ou lista vazia") */
             BookScreenContent(
                 bookTitle = message,
                 bookGenre = "",
@@ -45,4 +48,6 @@ fun BookScreen() {
             )
         }
     }
+
+    AddBookBottomSheet()
 }
