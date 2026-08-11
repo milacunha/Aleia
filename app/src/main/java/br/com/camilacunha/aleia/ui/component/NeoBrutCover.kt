@@ -17,7 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -34,12 +34,13 @@ import br.com.camilacunha.aleia.ui.theme.Black
 import br.com.camilacunha.aleia.ui.theme.LightGray
 import br.com.camilacunha.aleia.ui.theme.PurpleNeo
 import br.com.camilacunha.aleia.ui.theme.White
+import coil.compose.AsyncImage
 
 @Composable
 fun NeoBrutCover(
     bookTitleText: String,
     bookGenreText: String,
-    bookCover: Painter?,
+    bookCover: String?,
     backgroundColor: Color = White,
     borderColor: Color = Black,
     shadowColor: Color = PurpleNeo,
@@ -80,11 +81,22 @@ fun NeoBrutCover(
                         ),
                     contentAlignment = Alignment.Center
                 ) {
-                    Image(
-                        modifier = Modifier.size(70.dp),
-                        painter = bookCover ?: painterResource(R.drawable.book),
-                        contentDescription = "book_cover"
-                    )
+                    if (bookCover.isNullOrEmpty()) {
+                        Image(
+                            modifier = Modifier.size(70.dp),
+                            painter = painterResource(R.drawable.book),
+                            contentDescription = "book_cover"
+                        )
+                    } else {
+                        AsyncImage(
+                            model = bookCover,
+                            contentDescription = "book_cover",
+                            modifier = Modifier.fillMaxSize(),
+                            contentScale = ContentScale.Crop,
+                            placeholder = painterResource(R.drawable.book),
+                            error = painterResource(R.drawable.book)
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -125,7 +137,7 @@ private fun NeoBrutCoverPreview() {
             NeoBrutCover(
                 bookTitleText = "O nome do vento",
                 bookGenreText = "fantasia",
-                bookCover = painterResource(R.drawable.book),
+                bookCover = null,
             )
         }
     }

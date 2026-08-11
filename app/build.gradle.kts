@@ -85,4 +85,6 @@ dependencies {
     implementation(libs.moshi.kotlin)
     ksp(libs.moshi.kotlin.codegen)
 
+    implementation(libs.coil.compose)
+
 }

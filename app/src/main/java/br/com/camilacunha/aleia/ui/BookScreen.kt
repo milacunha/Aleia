@@ -25,7 +25,7 @@ fun BookScreen() {
             BookScreenContent(
                 bookTitle = book.title,
                 bookGenre = book.genre.orEmpty(),
-                bookCover = null, /* TODO */
+                bookCover = book.coverUrl,
                 onTryAgain = { viewModel.randomizeAgain() },
                 onAccepted = { viewModel.acceptSuggestion() },
                 onFilter = { /* TODO() */ viewModel.addMockBooks() },
