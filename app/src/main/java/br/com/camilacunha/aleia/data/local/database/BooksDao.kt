@@ -23,4 +23,27 @@ interface BooksDao {
 
     @Query("SELECT * FROM books WHERE isRead = 0 AND genre = :genre")
     suspend fun getUnreadBooksByGenre(genre: String): List<BookEntity>
+
+    @Query(
+        """
+        SELECT * FROM books 
+        WHERE isRead = 0 
+          AND (coverUrl IS NULL OR coverUrl = '' OR genre IS NULL OR genre = '')
+        ORDER BY id ASC
+    """
+    )
+    suspend fun getBooksMissingMetadata(): List<BookEntity>
+
+    @Query(
+        """
+        UPDATE books 
+        SET coverUrl = :coverUrl, genre = :genre 
+        WHERE id = :id
+    """
+    )
+    suspend fun updateBookCoverAndGenre(
+        id: Int,
+        coverUrl: String?,
+        genre: String?
+    ): Int //0 se não encontrado
 }

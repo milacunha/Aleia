@@ -9,4 +9,6 @@ interface SaveBooksRepository {
     suspend fun markAsRead(bookId: Int)
     suspend fun getDistinctGenres(): List<String>
     suspend fun getUnreadBooksByGenre(genre: String): List<Book>
+    suspend fun getBooksMissingMetadata(): List<Book>
+    suspend fun updateBookCoverAndGenre(id: Int, coverUrl: String?, genre: String?): Boolean
 }

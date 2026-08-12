@@ -10,6 +10,7 @@ import br.com.camilacunha.aleia.domain.model.Book
 import br.com.camilacunha.aleia.ui.state.AddBookUiState
 import br.com.camilacunha.aleia.ui.state.BookUiState
 import br.com.camilacunha.aleia.ui.state.FilterUiState
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -47,7 +48,9 @@ class BookViewModel(
     val genres: StateFlow<List<String>> = _genres.asStateFlow()
 
     init {
+        addMockBooks() /* TODO("to be removed") */
         loadBooksAndRandomize()
+        syncMissingBooks()
     }
 
     private fun loadBooksAndRandomize(filter: String? = null) {
@@ -187,6 +190,7 @@ class BookViewModel(
             } catch (e: Exception) {
                 Log.e(tag, "Erro ao buscar livro para adição", e)
                 _addBookUiState.value = AddBookUiState.Error("Erro ao buscar: ${e.message}")
+                /* TODO("livro precisa salvar o título mesmo que de erro na api ao buscar outras informações") */
             }
         }
     }
@@ -195,10 +199,7 @@ class BookViewModel(
     fun addMockBooks() {
         viewModelScope.launch {
             val mockBooks = listOf(
-                Book(title = "Duna", genre = "Ficção Científica"),
-                Book(title = "Harry potter e a pedra filosofal", genre = "Fantasia"),
-                Book(title = "Segundo sexo", genre = "Feminismo"),
-                Book(title = "Half Bad", genre = "Fantasia")
+                Book(title = "Duna", genre = "Ficção Científica")
             )
             mockBooks.forEach { book ->
                 saveBooksRepository.addBook(book).let { result ->
@@ -294,6 +295,91 @@ class BookViewModel(
             } catch (e: Exception) {
                 Log.e(tag, "Erro ao carregar gêneros", e)
                 _genres.value = emptyList()
+            }
+        }
+    }
+
+    private fun syncMissingBooks() {
+        viewModelScope.launch {
+            try {
+                Log.d(tag, "🔄 Iniciando sync de metadados faltantes...")
+
+                val booksToSync = saveBooksRepository.getBooksMissingMetadata()
+                if (booksToSync.isEmpty()) {
+                    Log.d(tag, "✅ Nenhum livro precisa de sync.")
+                    return@launch
+                }
+
+                Log.d(tag, "📚 Livros para sincronizar: ${booksToSync.size}")
+
+                booksToSync.forEachIndexed { index, book ->
+                    try {
+                        if (index > 0) {
+                            delay(300L)
+                        }
+
+                        Log.d(tag, "🔍 Buscando dados para: ${book.title}")
+                        val result = remoteRepository.fetchCoverAndGenre(book.title)
+
+                        if (result != null) {
+                            val (coverUrl, genre) = result
+                            val updated = saveBooksRepository.updateBookCoverAndGenre(
+                                id = book.id,
+                                coverUrl = coverUrl,
+                                genre = genre
+                            )
+
+                            if (updated) {
+                                Log.d(
+                                    tag,
+                                    "✅ Livro atualizado: ${book.title} (capa: ${coverUrl != null}, gênero: $genre)"
+                                )
+
+                                val updatedBook = book.copy(
+                                    coverUrl = coverUrl ?: book.coverUrl,
+                                    genre = genre ?: book.genre
+                                )
+
+                                val currentUnread = sessionState.unreadBooks
+                                val indexInSession = currentUnread.indexOfFirst { it.id == book.id }
+
+                                if (indexInSession != -1) {
+                                    sessionState = sessionState.copy(
+                                        unreadBooks = currentUnread.toMutableList().apply {
+                                            set(indexInSession, updatedBook)
+                                        }
+                                    )
+                                    Log.d(
+                                        tag,
+                                        "📦 sessionState atualizado para o livro ID ${book.id}"
+                                    )
+                                }
+
+                                val currentState = _uiState.value
+                                if (currentState is BookUiState.Success && currentState.book.id == book.id) {
+                                    _uiState.value = BookUiState.Success(updatedBook)
+                                    Log.d(tag, "✨ UI atualizada magicamente com capa/gênero!")
+                                } else {
+                                    Log.d(
+                                        tag,
+                                        "ℹ️ Livro atualizado não está sendo exibido no momento (ou UI não é Success)."
+                                    )
+                                }
+                            } else {
+                                Log.w(tag, "⚠️ Falha ao atualizar livro: ${book.title}")
+                            }
+                        } else {
+                            Log.w(tag, "⚠️ Nenhum dado encontrado na API para: ${book.title}")
+                        }
+                    } catch (e: Exception) {
+                        Log.e(tag, "❌ Erro ao sincronizar livro '${book.title}'", e)
+                    }
+                }
+
+                Log.d(tag, "🏁 Sync de metadados finalizada.")
+
+            } catch (e: Exception) {
+                Log.e(tag, "❌ Erro fatal na sync de metadados", e)
             }
         }
     }

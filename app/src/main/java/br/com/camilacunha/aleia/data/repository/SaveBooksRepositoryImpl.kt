@@ -12,16 +12,18 @@ class SaveBooksRepositoryImpl(
     private val bookDao: BooksDao
 ) : SaveBooksRepository {
 
+    private val tag = "SaveBooksRepositoryImpl"
+
     override suspend fun addBook(book: Book): AddBookResult {
         val bookEntity = book.toEntity()
 
         return try {
             val insertedId = bookDao.insertBook(bookEntity)
             if (insertedId != -1L) {
-                Log.d("SaveBooksRepositoryImpl", "Inserido: ${bookEntity.title}")
+                Log.d(tag, "Inserido: ${bookEntity.title}")
                 AddBookResult.Success
             } else {
-                Log.d("SaveBooksRepositoryImpl", "Esse livro já foi salvo: ${bookEntity.title}")
+                Log.d(tag, "Esse livro já foi salvo: ${bookEntity.title}")
                 AddBookResult.AlreadyExists
             }
         } catch (e: Exception) {
@@ -43,5 +45,29 @@ class SaveBooksRepositoryImpl(
 
     override suspend fun getUnreadBooksByGenre(genre: String): List<Book> {
         return bookDao.getUnreadBooksByGenre(genre).map { it.toDomain() }
+    }
+
+    override suspend fun getBooksMissingMetadata(): List<Book> {
+        return bookDao.getBooksMissingMetadata().map { it.toDomain() }
+    }
+
+    override suspend fun updateBookCoverAndGenre(
+        id: Int,
+        coverUrl: String?,
+        genre: String?
+    ): Boolean {
+        return try {
+            val affectedRows = bookDao.updateBookCoverAndGenre(id, coverUrl, genre)
+            val success = affectedRows > 0
+            if (success) {
+                Log.d(tag, "Atualizado livro ID $id: cover=$coverUrl, genre=$genre")
+            } else {
+                Log.d(tag, "Falha ao atualizar livro ID $id (não encontrado)")
+            }
+            success
+        } catch (e: Exception) {
+            Log.e(tag, "Erro ao atualizar livro ID $id", e)
+            false
+        }
     }
 }
