@@ -9,6 +9,7 @@ interface GoogleBooksApi {
     suspend fun searchBooks(
         @Query("q") query: String,
         @Query("maxResults") maxResults: Int = 1,
-        @Query("key") apiKey: String? = null
+        @Query("key") apiKey: String? = null,
+        @Query("langRestrict") langRestrict: String? = null
     ): GoogleBookResponse
 }

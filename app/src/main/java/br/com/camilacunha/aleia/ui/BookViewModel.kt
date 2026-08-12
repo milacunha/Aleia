@@ -153,46 +153,84 @@ class BookViewModel(
         viewModelScope.launch {
             _addBookUiState.value = AddBookUiState.Loading
             try {
-                val volume = remoteRepository.searchBookByTitle(title)
-                if (volume != null) {
-                    val info = volume.volumeInfo
-                    val book = Book(
-                        title = info?.title ?: title,
-                        author = info?.authors?.joinToString(),
-                        genre = info?.genres?.firstOrNull(),
-                        coverUrl = info?.imageLinks?.thumbnail
-                    )
-                    val addResult = saveBooksRepository.addBook(book)
-                    when (addResult) {
-                        AddBookResult.AlreadyExists -> {
-                            _addBookUiState.value =
-                                AddBookUiState.Error("Livro já existe na biblioteca")
-                        }
+                val books = remoteRepository.searchBooksByTitle(title)
 
-                        is AddBookResult.Error -> {
-                            _addBookUiState.value =
-                                AddBookUiState.Error("Erro ao salvar: ${addResult.message}")
-                        }
-
-                        AddBookResult.Success -> {
-                            _addBookUiState.value = AddBookUiState.Success(
-                                title = info?.title ?: title,
-                                author = info?.authors?.joinToString(),
-                                genre = info?.genres?.firstOrNull(),
-                                coverUrl = info?.imageLinks?.thumbnail
-                            )
-                            refreshUnreadBooks()
-                        }
-                    }
+                if (books.isNotEmpty()) {
+                    _addBookUiState.value = AddBookUiState.SearchResults(books)
+                    Log.d(tag, "Resultados encontrados: ${books.size}")
                 } else {
-                    _addBookUiState.value = AddBookUiState.Error("Livro não encontrado na API")
+                    _addBookUiState.value = AddBookUiState.Error(
+                        "Nenhum livro com capa encontrado. Deseja adicionar só o título?",
+                        title = title
+                    )
                 }
             } catch (e: Exception) {
-                Log.e(tag, "Erro ao buscar livro para adição", e)
+                Log.e(tag, "Erro ao buscar livros", e)
                 _addBookUiState.value = AddBookUiState.Error("Erro ao buscar: ${e.message}")
-                /* TODO("livro precisa salvar o título mesmo que de erro na api ao buscar outras informações") */
             }
         }
+    }
+
+    fun saveSelectedBook(book: Book) {
+        viewModelScope.launch {
+            try {
+                val result = saveBooksRepository.addBook(book)
+                when (result) {
+                    AddBookResult.AlreadyExists -> {
+                        _addBookUiState.value =
+                            AddBookUiState.Error("Livro já existe na biblioteca")
+                    }
+
+                    is AddBookResult.Error -> {
+                        _addBookUiState.value =
+                            AddBookUiState.Error("Erro ao salvar: ${result.message}")
+                    }
+
+                    AddBookResult.Success -> {
+                        _addBookUiState.value = AddBookUiState.Success(
+                            title = book.title,
+                            author = book.author,
+                            genre = book.genre,
+                            coverUrl = book.coverUrl
+                        )
+                        refreshUnreadBooks()
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e(tag, "Erro ao salvar livro selecionado", e)
+                _addBookUiState.value = AddBookUiState.Error("Erro ao salvar: ${e.message}")
+            }
+        }
+    }
+
+    fun addBookWithoutMetadata(title: String) {
+        viewModelScope.launch {
+            val book = Book(title = title)
+            when (val result = saveBooksRepository.addBook(book)) {
+                AddBookResult.AlreadyExists -> {
+                    _addBookUiState.value = AddBookUiState.Error("Livro já existe na biblioteca")
+                }
+
+                is AddBookResult.Error -> {
+                    _addBookUiState.value =
+                        AddBookUiState.Error("Erro ao salvar: ${result.message}")
+                }
+
+                AddBookResult.Success -> {
+                    _addBookUiState.value = AddBookUiState.Success(
+                        title = title,
+                        author = null,
+                        genre = null,
+                        coverUrl = null
+                    )
+                    refreshUnreadBooks()
+                }
+            }
+        }
+    }
+
+    fun resetAddState() {
+        _addBookUiState.value = AddBookUiState.Idle
     }
 
     //TODO("função será removida depois")
