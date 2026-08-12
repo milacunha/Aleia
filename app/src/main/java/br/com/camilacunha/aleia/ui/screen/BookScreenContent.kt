@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.sp
 import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.ui.component.NeoBrutButton
 import br.com.camilacunha.aleia.ui.component.NeoBrutCover
+import br.com.camilacunha.aleia.ui.state.FilterUiState
 import br.com.camilacunha.aleia.ui.theme.AleiaTheme
 import br.com.camilacunha.aleia.ui.theme.AquaNeo
 import br.com.camilacunha.aleia.ui.theme.Background
@@ -40,6 +41,7 @@ fun BookScreenContent(
     bookTitle: String,
     bookGenre: String,
     bookCover: String?,
+    filterState: FilterUiState,
     onTryAgain: () -> Unit,
     onAccepted: () -> Unit,
     onFilter: () -> Unit,
@@ -108,7 +110,10 @@ fun BookScreenContent(
             NeoBrutButton(
                 modifier = Modifier.size(100.dp, 70.dp),
                 onClick = onFilter,
-                text = stringResource(R.string.filter_genre).uppercase(),
+                text = when (filterState) {
+                    is FilterUiState.Inactive -> stringResource(R.string.filter_genre).uppercase()
+                    is FilterUiState.Active -> "Filtrando: ${filterState.genre}".uppercase()
+                },
                 fontSize = 14.sp,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
                 fontWeight = FontWeight.Bold,
@@ -141,7 +146,8 @@ fun PreviewBookSelectionScreen() {
             onTryAgain = {},
             onAccepted = {},
             onFilter = {},
-            onAddBook = {}
+            onAddBook = {},
+            filterState = FilterUiState.Inactive
         )
     }
 }

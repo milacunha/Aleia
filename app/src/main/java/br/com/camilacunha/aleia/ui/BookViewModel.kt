@@ -9,6 +9,7 @@ import br.com.camilacunha.aleia.domain.model.AddBookResult
 import br.com.camilacunha.aleia.domain.model.Book
 import br.com.camilacunha.aleia.ui.state.AddBookUiState
 import br.com.camilacunha.aleia.ui.state.BookUiState
+import br.com.camilacunha.aleia.ui.state.FilterUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -33,17 +34,45 @@ class BookViewModel(
     private val _isAddSheetVisible = MutableStateFlow(false)
     val isAddSheetVisible: StateFlow<Boolean> = _isAddSheetVisible.asStateFlow()
 
+    //filter bottom sheet
+    private val _filterState = MutableStateFlow<FilterUiState>(FilterUiState.Inactive)
+    val filterState: StateFlow<FilterUiState> = _filterState.asStateFlow()
+
+    // Filter bottom sheet visibility
+    private val _isFilterSheetVisible = MutableStateFlow(false)
+    val isFilterSheetVisible: StateFlow<Boolean> = _isFilterSheetVisible.asStateFlow()
+
+    // Available genres list
+    private val _genres = MutableStateFlow<List<String>>(emptyList())
+    val genres: StateFlow<List<String>> = _genres.asStateFlow()
+
     init {
         loadBooksAndRandomize()
     }
 
-    private fun loadBooksAndRandomize() {
+    private fun loadBooksAndRandomize(filter: String? = null) {
         viewModelScope.launch {
             _uiState.value = BookUiState.Loading
             try {
-                val unreadBooks = saveBooksRepository.getAllUnreadBooks()
-                sessionState = SessionState(unreadBooks = unreadBooks)
-                Log.d(tag, "livros nao lidos: $unreadBooks")
+                val unreadBooks = if (filter == null) {
+                    saveBooksRepository.getAllUnreadBooks()
+                } else {
+                    saveBooksRepository.getUnreadBooksByGenre(filter)
+                }
+                sessionState = SessionState(
+                    unreadBooks = unreadBooks,
+                    shownIds = emptySet(), //talvez de problema
+                    activeFilter = filter
+                )
+
+                _filterState.value = if (filter == null) {
+                    FilterUiState.Inactive
+                } else {
+                    FilterUiState.Active(filter)
+                }
+
+                Log.d(tag, "livros carregados (filtro: $filter): ${unreadBooks.size}")
+
                 if (unreadBooks.isEmpty()) {
                     _uiState.value = BookUiState.Empty()
                 } else {
@@ -194,12 +223,17 @@ class BookViewModel(
         }
     }
 
-    // BookViewModel.kt
     private fun refreshUnreadBooks() {
         viewModelScope.launch {
             try {
-                val unreadBooks = saveBooksRepository.getAllUnreadBooks()
-                // Mantém os IDs já mostrados, mas remove os que não existem mais
+                val currentFilter = sessionState.activeFilter
+
+                val unreadBooks = if (currentFilter == null) {
+                    saveBooksRepository.getAllUnreadBooks()
+                } else {
+                    saveBooksRepository.getUnreadBooksByGenre(currentFilter)
+                }
+
                 val validShownIds = sessionState.shownIds.filter { id ->
                     unreadBooks.any { it.id == id }
                 }.toSet()
@@ -209,16 +243,13 @@ class BookViewModel(
                     shownIds = validShownIds
                 )
 
-                // Se não houver livros, mostra vazio
                 if (unreadBooks.isEmpty()) {
                     _uiState.value = BookUiState.Empty()
                 } else {
-                    // Se o livro atual não estiver mais na lista (ex: foi marcado como lido), sorteia outro
                     val currentBook = (_uiState.value as? BookUiState.Success)?.book
                     if (currentBook != null && unreadBooks.none { it.id == currentBook.id }) {
                         pickRandomBook()
                     } else {
-                        // Mantém o livro atual, mas atualiza os dados (ex: capa/genêro)
                         currentBook?.let {
                             val updatedBook = unreadBooks.find { it.id == it.id }
                             if (updatedBook != null && updatedBook != currentBook) {
@@ -229,6 +260,40 @@ class BookViewModel(
                 }
             } catch (e: Exception) {
                 Log.e(tag, "Erro ao atualizar lista de livros", e)
+            }
+        }
+    }
+
+    fun applyFilter(genre: String) {
+        if (sessionState.activeFilter == genre) return
+
+        loadBooksAndRandomize(filter = genre)
+    }
+
+    fun clearFilter() {
+        if (sessionState.activeFilter == null) return
+
+        loadBooksAndRandomize(filter = null)
+    }
+
+    fun showFilterSheet() {
+        _isFilterSheetVisible.value = true
+        loadGenres()
+    }
+
+    fun dismissFilterSheet() {
+        _isFilterSheetVisible.value = false
+    }
+
+    private fun loadGenres() {
+        viewModelScope.launch {
+            try {
+                val genreList = saveBooksRepository.getDistinctGenres()
+                _genres.value = genreList
+                Log.d(tag, "Gêneros carregados: ${genreList.size}")
+            } catch (e: Exception) {
+                Log.e(tag, "Erro ao carregar gêneros", e)
+                _genres.value = emptyList()
             }
         }
     }

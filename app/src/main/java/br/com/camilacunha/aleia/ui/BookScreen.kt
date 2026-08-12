@@ -5,6 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import br.com.camilacunha.aleia.ui.screen.AddBookBottomSheet
 import br.com.camilacunha.aleia.ui.screen.BookScreenContent
+import br.com.camilacunha.aleia.ui.screen.FilterGenreBottomSheet
 import br.com.camilacunha.aleia.ui.state.BookUiState
 import org.koin.androidx.compose.koinViewModel
 
@@ -13,6 +14,7 @@ fun BookScreen() {
 
     val viewModel: BookViewModel = koinViewModel()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val filterState by viewModel.filterState.collectAsStateWithLifecycle()
 
     when (uiState) {
         is BookUiState.Loading -> {
@@ -26,9 +28,10 @@ fun BookScreen() {
                 bookTitle = book.title,
                 bookGenre = book.genre.orEmpty(),
                 bookCover = book.coverUrl,
+                filterState = filterState,
                 onTryAgain = { viewModel.randomizeAgain() },
                 onAccepted = { viewModel.acceptSuggestion() },
-                onFilter = { /* TODO() */ viewModel.addMockBooks() },
+                onFilter = { viewModel.showFilterSheet() },
                 onAddBook = { viewModel.showAddSheet() }
             )
         }
@@ -41,6 +44,7 @@ fun BookScreen() {
                 bookTitle = message,
                 bookGenre = "",
                 bookCover = null,
+                filterState = filterState,
                 onTryAgain = { viewModel.randomizeAgain() },
                 onAccepted = { viewModel.acceptSuggestion() },
                 onFilter = { },
@@ -50,4 +54,5 @@ fun BookScreen() {
     }
 
     AddBookBottomSheet()
+    FilterGenreBottomSheet()
 }

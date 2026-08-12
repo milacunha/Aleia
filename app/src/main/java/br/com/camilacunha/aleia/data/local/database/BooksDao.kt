@@ -17,4 +17,10 @@ interface BooksDao {
 
     @Query("UPDATE books SET isRead = 1 WHERE id = :bookId")
     suspend fun markAsRead(bookId: Int)
+
+    @Query("SELECT DISTINCT genre FROM books WHERE isRead = 0 AND genre IS NOT NULL AND genre != '' ORDER BY genre")
+    suspend fun getDistinctGenres(): List<String>
+
+    @Query("SELECT * FROM books WHERE isRead = 0 AND genre = :genre")
+    suspend fun getUnreadBooksByGenre(genre: String): List<BookEntity>
 }

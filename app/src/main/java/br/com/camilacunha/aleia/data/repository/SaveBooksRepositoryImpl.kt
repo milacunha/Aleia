@@ -36,4 +36,12 @@ class SaveBooksRepositoryImpl(
     override suspend fun markAsRead(bookId: Int) {
         bookDao.markAsRead(bookId)
     }
+
+    override suspend fun getDistinctGenres(): List<String> {
+        return bookDao.getDistinctGenres()
+    }
+
+    override suspend fun getUnreadBooksByGenre(genre: String): List<Book> {
+        return bookDao.getUnreadBooksByGenre(genre).map { it.toDomain() }
+    }
 }
