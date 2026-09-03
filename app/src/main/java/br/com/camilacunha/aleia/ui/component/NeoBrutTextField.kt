@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -20,16 +21,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.ui.theme.AleiaTheme
 import br.com.camilacunha.aleia.ui.theme.Background
 import br.com.camilacunha.aleia.ui.theme.Black
@@ -72,22 +67,13 @@ fun NeoBrutTextField(
                 Text(
                     text = label.uppercase(),
                     modifier = Modifier.offset(y = 8.dp),
-                    color = DarkGray,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 14.sp,
-                    letterSpacing = 2.sp
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = DarkGray
                 )
             },
             singleLine = singleLine,
             enabled = enabled,
-            textStyle = TextStyle(
-                color = textColor,
-                fontSize = 14.sp,
-                fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                fontWeight = FontWeight.SemiBold,
-                letterSpacing = 2.sp
-            ),
+            textStyle = MaterialTheme.typography.bodyMedium.copy(color = textColor),
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent,

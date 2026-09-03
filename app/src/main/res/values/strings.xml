@@ -15,4 +15,6 @@
     <string name="filter_by_genre">Filtrar por gênero</string>
     <string name="clean_filter">Limpar filtro</string>
     <string name="none_genre_available">Nenhum gênero disponível</string>
+    <string name="refresh">Refresh</string>
+    <string name="book_cover">book_cover</string>
 </resources>

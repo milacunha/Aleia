@@ -14,15 +14,13 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -64,10 +62,7 @@ fun BookScreenContent(
                 text = stringResource(R.string.app_name).uppercase(),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.align(Alignment.Center),
-                fontSize = 22.sp,
-                fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                fontWeight = FontWeight.Bold,
-                letterSpacing = 3.sp,
+                style = MaterialTheme.typography.titleLarge
             )
 
             IconButton(
@@ -76,7 +71,7 @@ fun BookScreenContent(
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_refresh),
-                    contentDescription = "Refresh"
+                    contentDescription = stringResource(R.string.refresh)
                 )
             }
         }
@@ -93,11 +88,8 @@ fun BookScreenContent(
             onClick = onAccepted,
             modifier = Modifier.size(300.dp, 70.dp),
             text = stringResource(R.string.suggestion_accepted).uppercase(),
-            fontSize = 18.sp,
             backgroundColor = YellowNeo,
-            fontFamily = FontFamily(Font(R.font.space_grotesk)),
-            fontWeight = FontWeight.Bold,
-            letterSpacing = 2.sp
+            style = MaterialTheme.typography.displayMedium
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -114,22 +106,16 @@ fun BookScreenContent(
                     is FilterUiState.Inactive -> stringResource(R.string.filter_genre).uppercase()
                     is FilterUiState.Active -> filterState.genre.uppercase()
                 },
-                fontSize = 14.sp,
                 backgroundColor = AquaNeo,
-                fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp
+                style = MaterialTheme.typography.displaySmall.copy(fontSize = 14.sp)
             )
 
             NeoBrutButton(
                 onClick = onAddBook,
                 modifier = Modifier.size(70.dp, 70.dp),
                 text = "+",
-                fontSize = 24.sp,
                 backgroundColor = AquaNeo,
-                fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp
+                style = MaterialTheme.typography.displayLarge
             )
         }
     }

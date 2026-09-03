@@ -36,16 +36,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.domain.model.Book
@@ -151,10 +147,7 @@ private fun AddBottomSheetContent(
     ) {
         Text(
             text = stringResource(R.string.add_book).uppercase(),
-            fontSize = 18.sp,
-            fontFamily = FontFamily(Font(R.font.space_grotesk)),
-            fontWeight = FontWeight.Bold,
-            letterSpacing = 2.sp,
+            style = MaterialTheme.typography.titleMedium
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -175,10 +168,7 @@ private fun AddBottomSheetContent(
                     modifier = Modifier.size(300.dp, 40.dp),
                     onClick = onSearch,
                     text = stringResource(R.string.search_book).uppercase(),
-                    fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 2.sp,
+                    style = MaterialTheme.typography.displaySmall,
                     backgroundColor = YellowNeo
                 )
             }
@@ -193,10 +183,7 @@ private fun AddBottomSheetContent(
             is AddBookUiState.Success -> {
                 Text(
                     text = stringResource(R.string.found_book).uppercase(),
-                    fontSize = 14.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 2.sp,
+                    style = MaterialTheme.typography.bodyMedium,
                     textAlign = TextAlign.Center,
                     color = DarkGray
                 )
@@ -204,10 +191,7 @@ private fun AddBottomSheetContent(
                 if (uiState.genre == null) {
                     Text(
                         text = stringResource(R.string.title, uiState.title).uppercase(),
-                        fontSize = 14.sp,
-                        fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                        fontWeight = FontWeight.SemiBold,
-                        letterSpacing = 2.sp,
+                        style = MaterialTheme.typography.bodyMedium,
                         textAlign = TextAlign.Center,
                         color = Black,
                         modifier = Modifier
@@ -224,10 +208,7 @@ private fun AddBottomSheetContent(
                             uiState.title,
                             uiState.genre
                         ).uppercase(),
-                        fontSize = 14.sp,
-                        fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                        fontWeight = FontWeight.SemiBold,
-                        letterSpacing = 2.sp,
+                        style = MaterialTheme.typography.bodyMedium,
                         textAlign = TextAlign.Center,
                         color = Black,
                         modifier = Modifier
@@ -244,24 +225,18 @@ private fun AddBottomSheetContent(
                 Text(
                     text = uiState.message.uppercase(),
                     modifier = Modifier.padding(bottom = 8.dp),
-                    fontSize = 14.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 2.sp,
+                    style = MaterialTheme.typography.bodyMedium,
                     textAlign = TextAlign.Center,
                     color = DarkGray
                 )
 
                 uiState.title?.let {
                     NeoBrutButton(
-                        modifier = Modifier.size(300.dp, 40.dp),
                         onClick = { onAddWithoutMetadata(it) },
+                        modifier = Modifier.size(300.dp, 40.dp),
                         text = stringResource(R.string.not_found_add_book).uppercase(),
-                        fontSize = 16.sp,
-                        fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                        fontWeight = FontWeight.Bold,
-                        letterSpacing = 2.sp,
-                        backgroundColor = YellowNeo
+                        backgroundColor = YellowNeo,
+                        style = MaterialTheme.typography.displaySmall
                     )
                 }
 
@@ -273,14 +248,11 @@ private fun AddBottomSheetContent(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     NeoBrutButton(
-                        modifier = Modifier.size(300.dp, 40.dp),
                         onClick = onResetSearch,
+                        modifier = Modifier.size(300.dp, 40.dp),
                         text = stringResource(R.string.search_new_book).uppercase(),
-                        fontSize = 16.sp,
-                        fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                        fontWeight = FontWeight.Bold,
-                        letterSpacing = 2.sp,
-                        backgroundColor = YellowNeo
+                        backgroundColor = YellowNeo,
+                        style = MaterialTheme.typography.displaySmall
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
@@ -288,10 +260,7 @@ private fun AddBottomSheetContent(
                     Text(
                         text = stringResource(R.string.select_book).uppercase(),
                         modifier = Modifier.padding(bottom = 8.dp),
-                        fontSize = 18.sp,
-                        fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                        fontWeight = FontWeight.Bold,
-                        letterSpacing = 2.sp,
+                        style = MaterialTheme.typography.titleMedium,
                         textAlign = TextAlign.Center
                     )
 
@@ -326,10 +295,7 @@ private fun AddBottomSheetContent(
                             ) {
                                 Text(
                                     text = book.title.uppercase(),
-                                    fontSize = 14.sp,
-                                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                                    fontWeight = FontWeight.SemiBold,
-                                    letterSpacing = 2.sp,
+                                    style = MaterialTheme.typography.bodyMedium,
                                     textAlign = TextAlign.Start
                                 )
                                 if (book.author != null) {
@@ -338,10 +304,7 @@ private fun AddBottomSheetContent(
                                         maxLines = 1,
                                         overflow = TextOverflow.Ellipsis,
                                         modifier = Modifier.padding(top = 4.dp),
-                                        fontSize = 12.sp,
-                                        fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                                        fontWeight = FontWeight.SemiBold,
-                                        letterSpacing = 2.sp,
+                                        style = MaterialTheme.typography.bodySmall,
                                         textAlign = TextAlign.Start,
                                         color = DarkGray
                                     )

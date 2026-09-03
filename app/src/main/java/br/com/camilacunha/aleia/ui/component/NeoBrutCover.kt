@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,15 +20,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.ui.theme.AleiaTheme
 import br.com.camilacunha.aleia.ui.theme.Black
@@ -85,12 +83,12 @@ fun NeoBrutCover(
                         Image(
                             modifier = Modifier.size(70.dp),
                             painter = painterResource(R.drawable.book),
-                            contentDescription = "book_cover"
+                            contentDescription = stringResource(R.string.book_cover)
                         )
                     } else {
                         AsyncImage(
                             model = bookCover,
-                            contentDescription = "book_cover",
+                            contentDescription = stringResource(R.string.book_cover),
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.Crop,
                             placeholder = painterResource(R.drawable.book),
@@ -104,10 +102,7 @@ fun NeoBrutCover(
                 Text(
                     modifier = Modifier.padding(horizontal = 8.dp),
                     text = bookTitleText.uppercase(),
-                    fontSize = 28.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 2.sp,
+                    style = MaterialTheme.typography.headlineLarge,
                     textAlign = TextAlign.Center
                 )
 
@@ -115,10 +110,8 @@ fun NeoBrutCover(
 
                 Text(
                     text = bookGenreText.uppercase(),
-                    fontSize = 18.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 2.sp,
+                    style = MaterialTheme.typography.headlineSmall,
+                    textAlign = TextAlign.Center
                 )
             }
         }

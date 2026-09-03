@@ -17,6 +17,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -27,13 +28,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.ui.BookViewModel
@@ -109,24 +106,18 @@ private fun FilterGenreBottomSheetContent(
         ) {
             Text(
                 text = stringResource(R.string.filter_by_genre).uppercase(),
-                fontSize = 18.sp,
-                fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp,
+                style = MaterialTheme.typography.titleMedium
             )
 
             Spacer(modifier = Modifier.height(8.dp))
 
             if (filterState is FilterUiState.Active) {
                 NeoBrutButton(
-                    modifier = Modifier.size(300.dp, 40.dp),
                     onClick = dismissOnClick,
+                    modifier = Modifier.size(300.dp, 40.dp),
                     text = stringResource(R.string.clean_filter).uppercase(),
-                    fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 2.sp,
-                    backgroundColor = AquaNeo
+                    backgroundColor = AquaNeo,
+                    style = MaterialTheme.typography.displaySmall
                 )
                 Spacer(modifier = Modifier.height(16.dp))
             }
@@ -134,10 +125,7 @@ private fun FilterGenreBottomSheetContent(
             if (genres.isEmpty()) {
                 Text(
                     text = stringResource(R.string.none_genre_available).uppercase(),
-                    fontSize = 14.sp,
-                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 2.sp,
+                    style = MaterialTheme.typography.bodyMedium,
                     textAlign = TextAlign.Center,
                     color = DarkGray
                 )
@@ -151,10 +139,7 @@ private fun FilterGenreBottomSheetContent(
                             headlineContent = {
                                 Text(
                                     text = genre.uppercase(),
-                                    fontSize = 14.sp,
-                                    fontFamily = FontFamily(Font(R.font.space_grotesk)),
-                                    fontWeight = FontWeight.SemiBold,
-                                    letterSpacing = 2.sp,
+                                    style = MaterialTheme.typography.bodyMedium,
                                     textAlign = TextAlign.Center,
                                     color = Black,
                                 )
