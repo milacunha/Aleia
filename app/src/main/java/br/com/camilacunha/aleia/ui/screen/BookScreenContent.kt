@@ -90,14 +90,14 @@ fun BookScreenContent(
         Spacer(modifier = Modifier.height(32.dp))
 
         NeoBrutButton(
-            modifier = Modifier.size(300.dp, 70.dp),
             onClick = onAccepted,
+            modifier = Modifier.size(300.dp, 70.dp),
             text = stringResource(R.string.suggestion_accepted).uppercase(),
             fontSize = 18.sp,
+            backgroundColor = YellowNeo,
             fontFamily = FontFamily(Font(R.font.space_grotesk)),
             fontWeight = FontWeight.Bold,
-            letterSpacing = 2.sp,
-            backgroundColor = YellowNeo
+            letterSpacing = 2.sp
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -108,28 +108,28 @@ fun BookScreenContent(
             verticalAlignment = Alignment.CenterVertically
         ) {
             NeoBrutButton(
-                modifier = Modifier.size(100.dp, 70.dp),
                 onClick = onFilter,
+                modifier = Modifier.size(100.dp, 70.dp),
                 text = when (filterState) {
                     is FilterUiState.Inactive -> stringResource(R.string.filter_genre).uppercase()
                     is FilterUiState.Active -> "Filtrando: ${filterState.genre}".uppercase()
                 },
                 fontSize = 14.sp,
+                backgroundColor = AquaNeo,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
                 fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp,
-                backgroundColor = AquaNeo
+                letterSpacing = 2.sp
             )
 
             NeoBrutButton(
-                modifier = Modifier.size(70.dp, 70.dp),
                 onClick = onAddBook,
+                modifier = Modifier.size(70.dp, 70.dp),
                 text = "+",
                 fontSize = 24.sp,
+                backgroundColor = AquaNeo,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
                 fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp,
-                backgroundColor = AquaNeo
+                letterSpacing = 2.sp
             )
         }
     }

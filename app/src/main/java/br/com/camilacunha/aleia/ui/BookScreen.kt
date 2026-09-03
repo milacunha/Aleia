@@ -45,10 +45,10 @@ fun BookScreen() {
                 bookGenre = "",
                 bookCover = null,
                 filterState = filterState,
-                onTryAgain = { viewModel.randomizeAgain() },
-                onAccepted = { viewModel.acceptSuggestion() },
-                onFilter = { },
-                onAddBook = { viewModel.addMockBooks() }
+                onTryAgain = { /* esconder botao */ },
+                onAccepted = { /* esconder botao */ },
+                onFilter = { /* esconder botao */ },
+                onAddBook = { viewModel.showAddSheet() }
             )
         }
     }

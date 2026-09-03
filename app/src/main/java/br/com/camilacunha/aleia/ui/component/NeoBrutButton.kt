@@ -6,7 +6,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
@@ -45,10 +47,14 @@ fun NeoBrutButton(
     shadowOffset: DpOffset = DpOffset(6.dp, 6.dp),
     fontFamily: FontFamily,
     fontWeight: FontWeight,
-    letterSpacing: TextUnit
+    letterSpacing: TextUnit,
+    enabled: Boolean = true
 ) {
     Box(
-        modifier = modifier.clickable { onClick() },
+        modifier = modifier.clickable(
+            enabled = enabled,
+            onClick = { onClick() }
+        ),
         contentAlignment = Alignment.Center
     ) {
         Box(
@@ -96,7 +102,22 @@ private fun NeoBrutButtonPreview() {
                 backgroundColor = YellowNeo,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
                 fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp
+                letterSpacing = 2.sp,
+                enabled = true
+            )
+
+            Spacer(modifier = Modifier.height(100.dp))
+
+            NeoBrutButton(
+                onClick = {},
+                modifier = Modifier.size(200.dp, 70.dp),
+                text = "Aceitar Sugestão",
+                fontSize = 24.sp,
+                backgroundColor = YellowNeo,
+                fontFamily = FontFamily(Font(R.font.space_grotesk)),
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 2.sp,
+                enabled = false
             )
         }
     }
