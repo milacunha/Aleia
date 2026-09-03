@@ -12,4 +12,7 @@
     <string name="search_new_book">Nova busca</string>
     <string name="select_book">Selecione um livro</string>
     <string name="cover_book">Capa do livro %1$s</string>
+    <string name="filter_by_genre">Filtrar por gênero</string>
+    <string name="clean_filter">Limpar filtro</string>
+    <string name="none_genre_available">Nenhum gênero disponível</string>
 </resources>

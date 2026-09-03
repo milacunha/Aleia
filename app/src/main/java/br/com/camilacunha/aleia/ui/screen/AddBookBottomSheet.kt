@@ -44,7 +44,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -55,10 +54,8 @@ import br.com.camilacunha.aleia.ui.component.NeoBrutButton
 import br.com.camilacunha.aleia.ui.component.NeoBrutTextField
 import br.com.camilacunha.aleia.ui.state.AddBookUiState
 import br.com.camilacunha.aleia.ui.theme.AleiaTheme
-import br.com.camilacunha.aleia.ui.theme.AquaNeo
 import br.com.camilacunha.aleia.ui.theme.Black
 import br.com.camilacunha.aleia.ui.theme.DarkGray
-import br.com.camilacunha.aleia.ui.theme.PurpleNeo
 import br.com.camilacunha.aleia.ui.theme.White
 import br.com.camilacunha.aleia.ui.theme.YellowNeo
 import coil.compose.AsyncImage
@@ -105,10 +102,7 @@ fun AddBookBottomSheet() {
 fun NeoBackground(
     backgroundColor: Color = White,
     borderColor: Color = Black,
-    shadowColor: Color = PurpleNeo,
-    shadowBorderColor: Color = PurpleNeo,
     borderWidth: Dp = 3.dp,
-    shadowOffset: DpOffset = DpOffset(6.dp, 6.dp),
     uiState: AddBookUiState,
     titleInput: String,
     onTitleChange: (String) -> Unit,
@@ -185,15 +179,14 @@ private fun AddBottomSheetContent(
                     fontFamily = FontFamily(Font(R.font.space_grotesk)),
                     fontWeight = FontWeight.Bold,
                     letterSpacing = 2.sp,
-                    backgroundColor = YellowNeo,
-                    enabled = titleInput.isNotBlank()
+                    backgroundColor = YellowNeo
                 )
             }
 
             AddBookUiState.Loading -> {
                 CircularProgressIndicator(
                     modifier = Modifier.wrapContentSize(),
-                    color = AquaNeo
+                    color = YellowNeo
                 )
             }
 
@@ -216,7 +209,13 @@ private fun AddBottomSheetContent(
                         fontWeight = FontWeight.SemiBold,
                         letterSpacing = 2.sp,
                         textAlign = TextAlign.Center,
-                        color = AquaNeo
+                        color = Black,
+                        modifier = Modifier
+                            .background(
+                                YellowNeo.copy(alpha = 0.15f),
+                                RoundedCornerShape(0.dp)
+                            )
+                            .padding(4.dp)
                     )
                 } else {
                     Text(
@@ -231,9 +230,13 @@ private fun AddBottomSheetContent(
                         letterSpacing = 2.sp,
                         textAlign = TextAlign.Center,
                         color = Black,
-                        modifier = Modifier.background(AquaNeo, RoundedCornerShape(0.dp))
+                        modifier = Modifier
+                            .background(
+                                YellowNeo.copy(alpha = 0.15f),
+                                RoundedCornerShape(0.dp)
+                            )
+                            .padding(4.dp)
                     )
-
                 }
             }
 
@@ -258,8 +261,7 @@ private fun AddBottomSheetContent(
                         fontFamily = FontFamily(Font(R.font.space_grotesk)),
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 2.sp,
-                        backgroundColor = YellowNeo,
-                        enabled = titleInput.isNotBlank()
+                        backgroundColor = YellowNeo
                     )
                 }
 
@@ -278,8 +280,7 @@ private fun AddBottomSheetContent(
                         fontFamily = FontFamily(Font(R.font.space_grotesk)),
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 2.sp,
-                        backgroundColor = YellowNeo,
-                        enabled = titleInput.isNotBlank()
+                        backgroundColor = YellowNeo
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))

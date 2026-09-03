@@ -47,12 +47,10 @@ fun NeoBrutButton(
     shadowOffset: DpOffset = DpOffset(6.dp, 6.dp),
     fontFamily: FontFamily,
     fontWeight: FontWeight,
-    letterSpacing: TextUnit,
-    enabled: Boolean = true
+    letterSpacing: TextUnit
 ) {
     Box(
         modifier = modifier.clickable(
-            enabled = enabled,
             onClick = { onClick() }
         ),
         contentAlignment = Alignment.Center
@@ -102,8 +100,7 @@ private fun NeoBrutButtonPreview() {
                 backgroundColor = YellowNeo,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
                 fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp,
-                enabled = true
+                letterSpacing = 2.sp
             )
 
             Spacer(modifier = Modifier.height(100.dp))
@@ -116,8 +113,7 @@ private fun NeoBrutButtonPreview() {
                 backgroundColor = YellowNeo,
                 fontFamily = FontFamily(Font(R.font.space_grotesk)),
                 fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp,
-                enabled = false
+                letterSpacing = 2.sp
             )
         }
     }
