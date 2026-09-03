@@ -112,7 +112,7 @@ fun BookScreenContent(
                 modifier = Modifier.size(100.dp, 70.dp),
                 text = when (filterState) {
                     is FilterUiState.Inactive -> stringResource(R.string.filter_genre).uppercase()
-                    is FilterUiState.Active -> "Filtrando: ${filterState.genre}".uppercase()
+                    is FilterUiState.Active -> filterState.genre.uppercase()
                 },
                 fontSize = 14.sp,
                 backgroundColor = AquaNeo,
