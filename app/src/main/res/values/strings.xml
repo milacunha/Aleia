@@ -17,5 +17,8 @@
     <string name="none_genre_available">Nenhum gênero disponível</string>
     <string name="refresh">Refresh</string>
     <string name="book_cover">book_cover</string>
-    <string name="loading">carregando...</string>
+    <string name="loading">Carregando…</string>
+    <string name="try_again">Tente novamente</string>
+    <string name="error_title">Erro ao carregar informações</string>
+    <string name="reload_books">Recomeçar sessão</string>
 </resources>

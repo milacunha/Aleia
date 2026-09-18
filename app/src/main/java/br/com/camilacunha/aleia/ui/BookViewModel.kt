@@ -9,6 +9,7 @@ import br.com.camilacunha.aleia.domain.model.AddBookResult
 import br.com.camilacunha.aleia.domain.model.Book
 import br.com.camilacunha.aleia.ui.state.AddBookUiState
 import br.com.camilacunha.aleia.ui.state.BookUiState
+import br.com.camilacunha.aleia.ui.state.EmptyAction
 import br.com.camilacunha.aleia.ui.state.FilterUiState
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -121,7 +122,10 @@ class BookViewModel(
         val available = sessionState.unreadBooks.filter { it.id !in sessionState.shownIds }
         Log.d(tag, "Livros disponíveis: $available")
         if (available.isEmpty()) {
-            _uiState.value = BookUiState.Empty("Todos os livros já foram mostrados nesta sessão")
+            _uiState.value = BookUiState.Empty(
+                "Todos os livros já foram mostrados nesta sessão",
+                action = EmptyAction.RESTART_SESSION
+            )
         } else {
             val randomBook = available.random()
             Log.d(tag, "Livro sorteado: $randomBook")
@@ -130,6 +134,12 @@ class BookViewModel(
             )
             _uiState.value = BookUiState.Success(randomBook)
         }
+    }
+
+    fun restartSession() {
+        if (sessionState.unreadBooks.isEmpty()) return
+        sessionState = sessionState.copy(shownIds = emptySet())
+        pickRandomBook()
     }
 
     //add book bottom sheet
