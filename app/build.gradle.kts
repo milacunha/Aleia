@@ -58,6 +58,9 @@ android {
             merges += "META-INF/LICENSE-notice.md"
         }
     }
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {
