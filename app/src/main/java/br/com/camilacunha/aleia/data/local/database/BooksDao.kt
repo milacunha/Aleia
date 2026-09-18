@@ -12,6 +12,9 @@ interface BooksDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertBook(book: BookEntity): Long //-1 se ignorado
 
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertBooks(books: List<BookEntity>): List<Long>
+
     @Query("SELECT * FROM books WHERE isRead is 0")
     suspend fun getAllUnreadBooks(): List<BookEntity>
 

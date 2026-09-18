@@ -48,7 +48,6 @@ class BookViewModel(
     val genres: StateFlow<List<String>> = _genres.asStateFlow()
 
     init {
-        addMockBooks() /* TODO("to be removed") */
         loadBooksAndRandomize()
         syncMissingBooks()
     }
@@ -231,35 +230,6 @@ class BookViewModel(
 
     fun resetAddState() {
         _addBookUiState.value = AddBookUiState.Idle
-    }
-
-    //TODO("função será removida depois")
-    fun addMockBooks() {
-        viewModelScope.launch {
-            val mockBooks = listOf(
-                Book(title = "Duna", genre = "Ficção Científica")
-            )
-            mockBooks.forEach { book ->
-                saveBooksRepository.addBook(book).let { result ->
-                    when (result) {
-                        AddBookResult.Success -> {
-                            Log.d(tag, "Livro adicionado com sucesso!")
-                        }
-
-                        AddBookResult.AlreadyExists -> {
-                            Log.d(tag, "Livro já existe no banco!")
-                        }
-
-                        is AddBookResult.Error -> {
-                            Log.d(tag, "Erro genérico: ${result.message}")
-                        }
-                    }
-                }
-            }
-
-            val mockBooksSize = saveBooksRepository.getAllUnreadBooks().size
-            Log.d(tag, "Total de livros inseridos: $mockBooksSize")
-        }
     }
 
     private fun refreshUnreadBooks() {

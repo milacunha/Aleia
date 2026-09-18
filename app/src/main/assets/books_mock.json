@@ -1,0 +1,14 @@
+[
+  {
+    "title": "O Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasia",
+    "coverUrl": "https://m.media-amazon.com/images/I/91M9xPIf10L._SL1500_.jpg"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Distopia",
+    "coverUrl": "https://m.media-amazon.com/images/I/61t0bwt1s3L._SL1000_.jpg"
+  }
+]
