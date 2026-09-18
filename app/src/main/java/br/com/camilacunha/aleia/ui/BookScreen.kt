@@ -6,6 +6,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import br.com.camilacunha.aleia.ui.screen.AddBookBottomSheet
 import br.com.camilacunha.aleia.ui.screen.BookScreenContent
 import br.com.camilacunha.aleia.ui.screen.FilterGenreBottomSheet
+import br.com.camilacunha.aleia.ui.screen.LoadingScreen
 import br.com.camilacunha.aleia.ui.state.BookUiState
 import org.koin.androidx.compose.koinViewModel
 
@@ -18,7 +19,7 @@ fun BookScreen() {
 
     when (uiState) {
         is BookUiState.Loading -> {
-            /* TODO("tela de loading") */
+            LoadingScreen()
         }
 
         is BookUiState.Success -> {

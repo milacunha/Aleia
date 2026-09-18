@@ -17,4 +17,5 @@
     <string name="none_genre_available">Nenhum gênero disponível</string>
     <string name="refresh">Refresh</string>
     <string name="book_cover">book_cover</string>
+    <string name="loading">carregando...</string>
 </resources>

@@ -96,6 +96,7 @@ dependencies {
     ksp(libs.moshi.kotlin.codegen)
 
     implementation(libs.coil.compose)
+    implementation(libs.coil.gif)
 
     // Unit tests
     testImplementation(libs.kotlinx.coroutines.test)
