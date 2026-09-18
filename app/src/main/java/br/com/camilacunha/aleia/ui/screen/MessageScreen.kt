@@ -101,7 +101,7 @@ fun MessageScreen(
             NeoBrutButton(
                 onClick = it,
                 modifier = Modifier
-                    .size(300.dp, 35.dp)
+                    .size(300.dp, 40.dp)
                     .align(Alignment.BottomCenter),
                 text = actionText?.uppercase() ?: "Tente novamente".uppercase(),
                 backgroundColor = PurpleNeo,
