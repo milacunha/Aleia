@@ -82,7 +82,7 @@ fun NeoBrutCover(
                     if (bookCover.isNullOrEmpty()) {
                         Image(
                             modifier = Modifier.size(70.dp),
-                            painter = painterResource(R.drawable.book),
+                            painter = painterResource(R.drawable.book), //TODO("trocar o icone do livro default")
                             contentDescription = stringResource(R.string.book_cover)
                         )
                     } else {
@@ -91,8 +91,8 @@ fun NeoBrutCover(
                             contentDescription = stringResource(R.string.book_cover),
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.Crop,
-                            placeholder = painterResource(R.drawable.book),
-                            error = painterResource(R.drawable.book)
+                            placeholder = painterResource(R.drawable.book), //TODO("trocar o icone do livro default")
+                            error = painterResource(R.drawable.book) //TODO("trocar o icone do livro default")
                         )
                     }
                 }
