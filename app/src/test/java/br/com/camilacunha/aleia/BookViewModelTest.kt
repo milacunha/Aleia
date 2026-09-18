@@ -5,6 +5,7 @@ import br.com.camilacunha.aleia.domain.BookRemoteRepository
 import br.com.camilacunha.aleia.domain.SaveBooksRepository
 import br.com.camilacunha.aleia.ui.BookViewModel
 import br.com.camilacunha.aleia.ui.state.BookUiState
+import br.com.camilacunha.aleia.ui.state.EmptyAction
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
@@ -177,5 +178,56 @@ class BookViewModelTest {
             advanceUntilIdle()
 
             coVerify(exactly = 1) { saveBooksRepository.getUnreadBooksByGenre("Fantasia") }
+        }
+
+    @Test
+    fun `when database has no unread books, then Empty has ADD_BOOK action`() =
+        runTest(mainDispatcherRule.testDispatcher) {
+            coEvery { saveBooksRepository.getAllUnreadBooks() } returns emptyList()
+
+            val viewModel = BookViewModel(saveBooksRepository, remoteRepository)
+            advanceUntilIdle()
+
+            val state = viewModel.uiState.value
+            assertTrue("Esperado Empty, foi $state", state is BookUiState.Empty)
+            assertEquals(EmptyAction.ADD_BOOK, (state as BookUiState.Empty).action)
+        }
+
+    @Test
+    fun `when all books are shown in session, then Empty has RESTART_SESSION action`() =
+        runTest(mainDispatcherRule.testDispatcher) {
+            val hobbit = book(id = 1, title = "O Hobbit")
+            coEvery { saveBooksRepository.getAllUnreadBooks() } returns listOf(hobbit)
+
+            val viewModel = BookViewModel(saveBooksRepository, remoteRepository)
+            advanceUntilIdle()
+
+            viewModel.randomizeAgain()
+            advanceUntilIdle()
+
+            val state = viewModel.uiState.value
+            assertTrue("Esperado Empty, foi $state", state is BookUiState.Empty)
+            assertEquals(EmptyAction.RESTART_SESSION, (state as BookUiState.Empty).action)
+        }
+
+    @Test
+    fun `when restartSession is called, then all books can be shown again`() =
+        runTest(mainDispatcherRule.testDispatcher) {
+            val hobbit = book(id = 1, title = "O Hobbit")
+            coEvery { saveBooksRepository.getAllUnreadBooks() } returns listOf(hobbit)
+
+            val viewModel = BookViewModel(saveBooksRepository, remoteRepository)
+            advanceUntilIdle()
+
+            viewModel.randomizeAgain()
+            advanceUntilIdle()
+            assertTrue(viewModel.uiState.value is BookUiState.Empty)
+
+            viewModel.restartSession()
+            advanceUntilIdle()
+
+            val state = viewModel.uiState.value
+            assertTrue("Esperado Success, foi $state", state is BookUiState.Success)
+            assertEquals("O Hobbit", (state as BookUiState.Success).book.title)
         }
 }
