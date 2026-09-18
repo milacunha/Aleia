@@ -63,7 +63,7 @@ class BookViewModel(
                 }
                 sessionState = SessionState(
                     unreadBooks = unreadBooks,
-                    shownIds = emptySet(), //talvez de problema
+                    shownIds = emptySet(),
                     activeFilter = filter
                 )
 
@@ -100,7 +100,7 @@ class BookViewModel(
             val currentBook = (_uiState.value as? BookUiState.Success)?.book ?: return@launch
             try {
                 saveBooksRepository.markAsRead(currentBook.id)
-                Log.e(tag, "Sugestão aceita: $currentBook")
+                Log.d(tag, "Sugestão aceita: $currentBook")
                 sessionState = sessionState.copy(
                     unreadBooks = sessionState.unreadBooks.filter { it.id != currentBook.id },
                     shownIds = sessionState.shownIds - currentBook.id
@@ -260,7 +260,7 @@ class BookViewModel(
                         pickRandomBook()
                     } else {
                         currentBook?.let {
-                            val updatedBook = unreadBooks.find { it.id == it.id }
+                            val updatedBook = unreadBooks.find { it.id == currentBook.id }
                             if (updatedBook != null && updatedBook != currentBook) {
                                 _uiState.value = BookUiState.Success(updatedBook)
                             }
