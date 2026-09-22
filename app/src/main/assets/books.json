@@ -1,0 +1,1046 @@
+[
+  {
+    "title": "Madame Bovary",
+    "author": "Gustave Flaubert",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=9858EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Flores para Algernon",
+    "author": "Daniel Keyes",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=KBdiDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Carmilla",
+    "author": "Sheridan Le Fanu",
+    "genre": "Terror",
+    "coverUrl": ""
+  },
+  {
+    "title": "Macunaíma",
+    "author": "Mário de Andrade",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Gente Pobre",
+    "author": "Fiódor Dostoiévski",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=pk0wEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Biblioteca dos Sonhos Secretos",
+    "author": "Michiko Aoyama",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=iurXEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Chocolate Quente às Quintas-Feiras",
+    "author": "Michiko Aoyama",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=lqEyEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Doceria Mágica da Rua do Anoitecer",
+    "author": "Hiyoko Kurisu",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=Dkk4EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Viúva de Ferro (Iron Widow)",
+    "author": "Xiran Jay Zhao",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=cZ2HEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "O Livro de Azrael",
+    "author": "Amber V. Nicole",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "Quicksilver",
+    "author": "Callie Hart",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=f0sbEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Zália & o Sangue Mágico",
+    "author": "André Hsu",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=F9-YEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Interion (As Crônicas de Júpiter #1)",
+    "author": "Patrícia Criado",
+    "genre": "Fantasia",
+    "coverUrl": ""
+  },
+  {
+    "title": "Bem-vindos à Livraria Hyunam-dong",
+    "author": "Hwang Bo-reum",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=zxTNEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Dia de Primavera",
+    "author": "Stefanie Cabanelas",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "A Extraordinária Cozinha dos Livros",
+    "author": "Kim Jee-Hye",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=XQw1EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Quarta Asa",
+    "author": "Rebecca Yarros",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=c6_fEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "No Sigilo",
+    "author": "Elle Kennedy & Sarina Bowen",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=tEOCEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Sete Anos Entre Nós",
+    "author": "Ashley Poston",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=yIxCEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Quebrando o Gelo",
+    "author": "Hannah Grace",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=yonAEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Que Seus Corações Sejam Luz",
+    "author": "Fae Quin",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "Minha Melhor Parte",
+    "author": "Hannah Bonam-Young",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "Powerless",
+    "author": "Lauren Roberts",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=QkTAEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Rivalidade Ardente",
+    "author": "Rachel Reid",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=ljrKEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Não é Amor",
+    "author": "Ali Hazelwood",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=oyQhEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Só Mais Uma Comédia Romântica",
+    "author": "Katelyn Doyle",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=qQsaEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Amor em Primeiro Plano",
+    "author": "Jessica Joyce",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=J78WEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "O Amor nos Tempos do Inferno",
+    "author": "Jaysea Lynn",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=C4mgEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Quando as Estrelas Caem",
+    "author": "Amie Kaufman & Meagan Spooner",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=T_M4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Hoje, Depois, Amanhã",
+    "author": "Rachel Lynn Solomon",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=4MOrEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Your Name",
+    "author": "Makoto Shinkai",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=4K-QwwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "A Rebelde do Deserto",
+    "author": "Alwyn Hamilton",
+    "genre": "Fantasia",
+    "coverUrl": ""
+  },
+  {
+    "title": "O Que o Rio Sabe",
+    "author": "Isabel Ibañez",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=LgEVEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Olhos d'Água",
+    "author": "Conceição Evaristo",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=g0kyDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Estela sem Deus",
+    "author": "Jeferson Tenório",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=HBh1EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Vida Pela Frente",
+    "author": "Romain Gary",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=NwSqDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Fique Comigo",
+    "author": "Ayobami Adebayo",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "Sintonia (In)Comum",
+    "author": "Luiza Helena Caporalli",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "A Biopolítica da Beleza",
+    "author": "Alvaro (Carmen) Jarrín",
+    "genre": "Antropologia",
+    "coverUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7IrftFxDnFcZ1qsfKo3oRTz2mTJkzeLuJAjPGW7rqtVIwgjpQ"
+  },
+  {
+    "title": "O Simbolismo Astrológico e a Psique Humana",
+    "author": "Luiz Carlos Teixeira de Freitas",
+    "genre": "Esoterismo",
+    "coverUrl": ""
+  },
+  {
+    "title": "Coisas Importantes Também Serão Esquecidas",
+    "author": "Martha Nowill",
+    "genre": "Biografia",
+    "coverUrl": "https://books.google.com/books/content?id=6Fw3EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Casa dos Budas Ditosos",
+    "author": "João Ubaldo Ribeiro",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Mulheres, Mitos e Deusas",
+    "author": "Martha Robles",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=zNi0DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Feminismo Branco",
+    "author": "Koa Beck",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=fjA4EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Quando Deus Era Mulher",
+    "author": "Merlin Stone",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=xb-ZEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Primeiro Eu Tive Que Morrer",
+    "author": "Lorena Portela",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=kG5bEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Após o Anoitecer",
+    "author": "Haruki Murakami",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=RMY2DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "História Secreta",
+    "author": "Donna Tartt",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=iqjMEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Ada ou Ardor: Crônica de uma Família",
+    "author": "Vladimir Nabokov",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=xz8pEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "A Ridícula Ideia de Nunca Mais Te Ver",
+    "author": "Rosa Montero",
+    "genre": "Biografia",
+    "coverUrl": "https://books.google.com/books/content?id=jeyMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Pequena Coreografia do Adeus",
+    "author": "Aline Bei",
+    "genre": "Ficção",
+    "coverUrl": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/913ySpzYczL._SL1500_.jpg"
+  },
+  {
+    "title": "A Metamorfose",
+    "author": "Franz Kafka",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=cccgEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Livro do Desassossego",
+    "author": "Fernando Pessoa",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=bd-gEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Floriografia - A Linguagem Secreta das Flores",
+    "author": "Jessica Roux",
+    "genre": "Botânica",
+    "coverUrl": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/91viet7oN+L._SL1500_.jpg"
+  },
+  {
+    "title": "Fitoenergética: A Energia das Plantas no Equilíbrio da Alma",
+    "author": "Bruno J. Gimenes",
+    "genre": "Esoterismo",
+    "coverUrl": "https://books.google.com/books/content?id=PFIsDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Mulher no Corpo de Xamã",
+    "author": "Lynn V. Andrews",
+    "genre": "Feminino",
+    "coverUrl": ""
+  },
+  {
+    "title": "O Tao da Física",
+    "author": "Fritjof Capra",
+    "genre": "Espiritualidade",
+    "coverUrl": "https://books.google.com/books/content?id=KxRaEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Despertar da Energia Feminina",
+    "author": "Miranda Gray",
+    "genre": "Feminino",
+    "coverUrl": "https://books.google.com/books/content?id=jze6DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "A Dança do Sagrado Feminino",
+    "author": "Iris J. Stewart",
+    "genre": "Feminino",
+    "coverUrl": ""
+  },
+  {
+    "title": "Introdução ao Budismo",
+    "author": "Geshe Kelsang Gyatso",
+    "genre": "Religião",
+    "coverUrl": "https://books.google.com/books/content?id=dKceEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Eu, Christiane F., 13 anos, drogada, prostituída...",
+    "author": "Kai Hermann e Horst Rieck",
+    "genre": "Biografia",
+    "coverUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZEjEGA0n9pkUoEt4k92wURB7oEHy7Koq7URARzFvqJsiAafWS2GRbsT8s&s=10"
+  },
+  {
+    "title": "No Tempo das Cerejas",
+    "author": "Célia Correia Loureiro",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=5uYrEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Anatomia da Psique",
+    "author": "Edward F. Edinger",
+    "genre": "Psicologia",
+    "coverUrl": "https://books.google.com/books/content?id=CqybfpEuMsoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Originárias",
+    "author": "Trudruá Dorrico (Org.) e Mauricio Negro (Org.)",
+    "genre": "Antropologia",
+    "coverUrl": ""
+  },
+  {
+    "title": "Agora que ele se foi",
+    "author": "Elizabeth Acevedo",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=WXUvEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "A cor do amanhecer",
+    "author": "Yanick Lahens",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Bem-vindo ao paraíso",
+    "author": "Nicole Dennis-Benn",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Cartas para minha mãe",
+    "author": "Teresa Cárdenas",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=C4P4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Gótico mexicano",
+    "author": "Silvia Moreno-Garcia",
+    "genre": "Terror",
+    "coverUrl": ""
+  },
+  {
+    "title": "A filha do Guardião do Fogo",
+    "author": "Angeline Boulley",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=BOV5EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Todas as coisas ferozes",
+    "author": "Cherie Dimaline",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=TEXREAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Cartas a uma negra",
+    "author": "Françoise Ega",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=n2EdEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Pegas de surpresa",
+    "author": "Adiba Jaigirdar",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "Escola de contos eróticos para viúvas",
+    "author": "Balli Kaur Jaswal",
+    "genre": "Feminismo",
+    "coverUrl": ""
+  },
+  {
+    "title": "Canção de ninar",
+    "author": "Leïla Slimani",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "As impacientes",
+    "author": "Djaïli Amadou Amal",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=I2ekEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Niketche: Uma História de Poligamia",
+    "author": "Paulina Chiziane",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=MgIWEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "O conto da deusa",
+    "author": "Natsuo Kirino",
+    "genre": "Feminino",
+    "coverUrl": "https://books.google.com/books/content?id=4N2IAwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Her body and other parties",
+    "author": "Carmen Maria Machado",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=3nAyDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "The woman destroyed",
+    "author": "Simone de Beauvoir",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=hGaNEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "The dangers of smoking in bed",
+    "author": "Mariana Enriquez",
+    "genre": "Terror",
+    "coverUrl": "https://books.google.com/books/content?id=d_gLEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Bad behavior",
+    "author": "Mary Gaitskill",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Hit parade of tears",
+    "author": "Izumi Suzuki",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=HH-FEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Sobre anarquismo, sexo e casamento",
+    "author": "Emma Goldman",
+    "genre": "Feminismo",
+    "coverUrl": ""
+  },
+  {
+    "title": "Águas vivas não têm ouvidos",
+    "author": "Adèle Rosenfeld",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=VgbGEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Astrologia e vidas passadas",
+    "author": "Maritha Pottenger",
+    "genre": "Esoterismo",
+    "coverUrl": ""
+  },
+  {
+    "title": "A estetização do mundo",
+    "author": "Gilles Lipovetsky e Jean Serroy",
+    "genre": "Filosofia",
+    "coverUrl": "https://books.google.com/books/content?id=8JwkCQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Gente ultraprocessada",
+    "author": "Chris van Tulleken",
+    "genre": "Ciência",
+    "coverUrl": "https://books.google.com/books/content?id=DmsfEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Medicina ayurvedica para mulher",
+    "author": "Atreya",
+    "genre": "Esoterismo",
+    "coverUrl": ""
+  },
+  {
+    "title": "Mulheres que correm com lobos",
+    "author": "Clarissa Pinkola Estés",
+    "genre": "Feminino",
+    "coverUrl": ""
+  },
+  {
+    "title": "Vagina",
+    "author": "Naomi Wolf",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=a8_T0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "A vergonha e as origens da autoestima",
+    "author": "Mario Jacoby",
+    "genre": "Psicologia",
+    "coverUrl": "https://books.google.com/books/content?id=3LPFEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Why women have better sex under socialism",
+    "author": "Kristen R. Ghodsee",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=naFqDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Amêndoas",
+    "author": "Sohn Won-pyung",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=EqjMEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Tudo que sei sobre amor",
+    "author": "Dolly Alderton",
+    "genre": "Biografia",
+    "coverUrl": "https://books.google.com/books/content?id=TQN0EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A redoma de vidro",
+    "author": "Sylvia Plath",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=DyiNDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Café tangerinn",
+    "author": "Emanuela Anechoum",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=lrs6EQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Pessoas normais",
+    "author": "Sally Rooney",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=_xKdDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Me chame pelo seu nome",
+    "author": "André Aciman",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=3YJCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Exu-Mulher E O Matriarcado Nagô: Masculinização, Demonização E Tensões De Gênero Na Formação Dos Candomblés",
+    "author": "Claudia Alexandre",
+    "genre": "Feminismo",
+    "coverUrl": ""
+  },
+  {
+    "title": "Girassoies da meia noite",
+    "author": "Diego Baptista",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "Oceano Entre Nós",
+    "author": "Tahereh Mafi",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=3E45EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Impostora",
+    "author": "R.F. Kuang",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=268OEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Ratazana",
+    "author": "Günter Grass",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "O Diabo Sobre o Cadáver Putrefato",
+    "author": "Ulisses Chaves",
+    "genre": "Terror",
+    "coverUrl": ""
+  },
+  {
+    "title": "A Pocket Full of Posies",
+    "author": "Shawn Sarles",
+    "genre": "Terror",
+    "coverUrl": "https://books.google.com/books/content?id=Ji1kEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Floresta",
+    "author": "Sophia de Mello Breyner Andresen",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "O Vilarejo",
+    "author": "Raphael Montes",
+    "genre": "Terror",
+    "coverUrl": "https://books.google.com/books/content?id=qM5xCgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "The Eight Girl",
+    "author": "Maxine Mei-Fung Chung",
+    "genre": "Terror",
+    "coverUrl": "https://books.google.com/books/content?id=hirXDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "The Ritual",
+    "author": "Adam Nevill",
+    "genre": "Terror",
+    "coverUrl": "https://books.google.com/books/content?id=eK0izNx9YaQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Slewfoot: A Tale of Bewitchery",
+    "author": "Gerald Brom",
+    "genre": "Fantasia",
+    "coverUrl": ""
+  },
+  {
+    "title": "Espadas Cruzadas",
+    "author": "Freya Marske",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=O6RxEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Aprendendo a Fingir",
+    "author": "Selina Mae",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=Hc5qEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Guerra da Papoula",
+    "author": "R.F. Kuang",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=dzByEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Tecelã de Tempestades",
+    "author": "Lauryn Hamilton Murray",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=pcJeEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "The Dangerous Convenience Store",
+    "author": "945 (Gusao)",
+    "genre": "Romance",
+    "coverUrl": ""
+  },
+  {
+    "title": "A garota que Não Se calou",
+    "author": "Abi Daré",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=8IMzEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Verão de lenço vermelho",
+    "author": "Katerina Silvánova e Elena Malíssova",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=8oMHEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Nem Todo outono é Igual",
+    "author": "Misty Wilson",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=U_uIEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Nunca Minta",
+    "author": "Freida McFadden",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=e2U0EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Toda para Mim",
+    "author": "Lyla Sage",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=BEpCEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Reencantada",
+    "author": "Lucy Jane Wood",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=tTC_EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Manual das Donas de Casa caçadoras de vampiros",
+    "author": "Grady Hendrix",
+    "genre": "Terror",
+    "coverUrl": "https://books.google.com/books/content?id=AHFcEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Qual o Problema das Mulheres?",
+    "author": "Jacky Fleming",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=H1G4jwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Os Monologos da vagina",
+    "author": "Eve Ensler",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=_iRjDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Conversas que Não Tive com Minha Mãe",
+    "author": "Felipe Brandão",
+    "genre": "Biografia",
+    "coverUrl": "https://books.google.com/books/content?id=rLzGEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "E Como Você Se Sente em Relação a Isso?",
+    "author": "Joshua Fletcher",
+    "genre": "Psicologia",
+    "coverUrl": "https://books.google.com/books/content?id=TvYQEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Nao Aguento Mais Nao Aguentar Mais",
+    "author": "Anne Helen Petersen",
+    "genre": "Feminismo",
+    "coverUrl": ""
+  },
+  {
+    "title": "Porno Chic",
+    "author": "Hilda Hilst",
+    "genre": "Erótico",
+    "coverUrl": ""
+  },
+  {
+    "title": "Onde Mora a Leveza depois da tempestade",
+    "author": "Noah Carvalho",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Materia escura",
+    "author": "Blake Crouch",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Amores Verdadeiros",
+    "author": "Taylor Jenkins Reid",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=GJzeDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Outra",
+    "author": "Mary Kubica",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=WTCoEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Paciente",
+    "author": "Jasper DeWitt",
+    "genre": "Terror",
+    "coverUrl": "https://books.google.com/books/content?id=O29XEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Peso do Pássaro Morto",
+    "author": "Aline Bei",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=gyQaEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Mito da Beleza",
+    "author": "Naomi Wolf",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=9bTaW5QN8cwC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "A Hipótese do Amor",
+    "author": "Ali Hazelwood",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=4hGIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Os Sete Maridos de Evelyn Hugo",
+    "author": "Taylor Jenkins Reid",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=EwyvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Orgulho e Preconceito",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "coverUrl": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/71PH+GoDXcL._SL1499_.jpg"
+  },
+  {
+    "title": "A Biblioteca da Meia-Noite",
+    "author": "Matt Haig",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=yflVEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Alice no País das Maravilhas",
+    "author": "Lewis Carroll",
+    "genre": "Fantasia",
+    "coverUrl": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/61qGD7-BjFL._SL1499_.jpg"
+  },
+  {
+    "title": "A Última Carta",
+    "author": "Rebecca Yarros",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=LndpEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Tudo o Que Deixamos Inacabado",
+    "author": "Rebecca Yarros",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=PCfyEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Cor Púrpura",
+    "author": "Alice Walker",
+    "genre": "Feminismo",
+    "coverUrl": "https://books.google.com/books/content?id=aWh7DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Vida Invisível de Addie LaRue",
+    "author": "V.E. Schwab",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=O95cEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Sol é Para Todos",
+    "author": "Harper Lee",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=XVvkCQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Crime e Castigo",
+    "author": "Fiódor Dostoiévski",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=tBz8DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Casa dos Espíritos",
+    "author": "Isabel Allende",
+    "genre": "Ficção",
+    "coverUrl": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/91eujA9J0pL._SL1500_.jpg"
+  },
+  {
+    "title": "Amor e Gelato",
+    "author": "Jenna Evans Welch",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=R9QnDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Noites Brancas",
+    "author": "Fiódor Dostoiévski",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=_YnrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Corte de Espinhos e Rosas",
+    "author": "Sarah J. Maas",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=Mg8xCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Trono de Vidro",
+    "author": "Sarah J. Maas",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=D6fMEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Caraval",
+    "author": "Stephanie Garber",
+    "genre": "Fantasia",
+    "coverUrl": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/71-ODLZRpuS._SL1500_.jpg"
+  },
+  {
+    "title": "Torto Arado",
+    "author": "Itamar Vieira Junior",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=lL2GDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Pachinko",
+    "author": "Min Jin Lee",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=LbOfEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Os Miseráveis",
+    "author": "Victor Hugo",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=5Bc-EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "100 Anos de Solidão",
+    "author": "Gabriel García Márquez",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=MAqQDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Ensaio Sobre a Cegueira",
+    "author": "José Saramago",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=IndvEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Diário de Anne Frank",
+    "author": "Anne Frank",
+    "genre": "Biografia",
+    "coverUrl": "https://books.google.com/books/content?id=1ZosEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Vidas Secas",
+    "author": "Graciliano Ramos",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=vb70EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Dom Casmurro",
+    "author": "Machado de Assis",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Capitães da Areia",
+    "author": "Jorge Amado",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "O Caçador de Pipas",
+    "author": "Khaled Hosseini",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=XtmlEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Duna",
+    "author": "Frank Herbert",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=taoSEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "O Amor nos Tempos do Cólera",
+    "author": "Gabriel García Márquez",
+    "genre": "Romance",
+    "coverUrl": "https://books.google.com/books/content?id=UlfdFb3ohAIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Crime do Padre Amaro",
+    "author": "Eça de Queirós",
+    "genre": "Ficção",
+    "coverUrl": ""
+  },
+  {
+    "title": "Divina Comédia",
+    "author": "Dante Alighieri",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=6RQ-AQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Retrato de Dorian Gray",
+    "author": "Oscar Wilde",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=6BEsEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "A Menina que Roubava Livros",
+    "author": "Markus Zusak",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=-_MMbijUmTEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=nGCIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "O Senhor dos Anéis",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=fWd6EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "Primo Basílio",
+    "author": "Eça de Queirós",
+    "genre": "Ficção",
+    "coverUrl": "https://books.google.com/books/content?id=pNOlDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "title": "As Brumas de Avalon",
+    "author": "Marion Zimmer Bradley",
+    "genre": "Fantasia",
+    "coverUrl": "https://books.google.com/books/content?id=rDE5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "title": "Um teto todo seu",
+    "author": "Virgínia Woolf",
+    "genre": "Feminismo",
+    "coverUrl": "http://m.media-amazon.com/images/I/71WEHtVKr+L._SL1240_.jpg"
+  }
+]
