@@ -343,8 +343,8 @@ class BookViewModel(
                             val (coverUrl, genre) = result
                             val updated = saveBooksRepository.updateBookCoverAndGenre(
                                 id = book.id,
-                                coverUrl = coverUrl,
-                                genre = genre
+                                coverUrl = if (book.coverUrl.isNullOrBlank()) coverUrl else book.coverUrl,
+                                genre = if (book.genre.isNullOrBlank()) genre else book.genre,
                             )
 
                             if (updated) {
