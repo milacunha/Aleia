@@ -107,7 +107,7 @@ class BookViewModel(
                     shownIds = sessionState.shownIds - currentBook.id
                 )
                 if (sessionState.unreadBooks.isEmpty()) {
-                    _uiState.value = BookUiState.Empty("Todos os livros foram lidos! 🎉")
+                    _uiState.value = BookUiState.Empty("Todos os livros foram lidos!")
                 } else {
                     pickRandomBook()
                 }

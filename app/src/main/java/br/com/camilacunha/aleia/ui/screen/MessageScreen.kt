@@ -20,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.ui.component.NeoBrutButton
 import br.com.camilacunha.aleia.ui.state.EmptyState
 import br.com.camilacunha.aleia.ui.state.ErrorState
@@ -129,6 +130,7 @@ private fun EmptyScreenPreview() {
         EmptyState(
             message = "Nenhum livro disponível",
             actionText = "Adicionar livro",
+            gifRes = R.raw.estante_vazia,
             onAction = {}
         )
     }

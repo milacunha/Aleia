@@ -5,22 +5,23 @@ import androidx.compose.ui.res.stringResource
 import br.com.camilacunha.aleia.R
 import br.com.camilacunha.aleia.ui.screen.MessageScreen
 
-//TODO("trocar o gif de loading")
-//TODO("trocar o gif de empty state")
-//TODO("trocar o gif de error")
-
 @Composable
 fun LoadingState() {
     MessageScreen(
-        gifRes = R.raw.loading,
+        gifRes = R.raw.vira_pagina,
         title = stringResource(R.string.loading)
     )
 }
 
 @Composable
-fun EmptyState(message: String? = null, actionText: String? = null, onAction: () -> Unit) {
+fun EmptyState(
+    message: String? = null,
+    gifRes: Int,
+    actionText: String? = null,
+    onAction: () -> Unit
+) {
     MessageScreen(
-        gifRes = R.raw.empty,
+        gifRes = gifRes,
         title = "Carregamento com sucesso!",
         message = message,
         actionText = actionText,
@@ -31,7 +32,7 @@ fun EmptyState(message: String? = null, actionText: String? = null, onAction: ()
 @Composable
 fun ErrorState(message: String? = null, onRetry: () -> Unit) {
     MessageScreen(
-        gifRes = R.raw.error,
+        gifRes = R.raw.estante_vazia,
         title = stringResource(R.string.error_title),
         message = message,
         actionText = stringResource(R.string.try_again),

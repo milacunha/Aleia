@@ -45,13 +45,21 @@ fun BookScreen() {
         is BookUiState.Empty -> {
             val emptyUiState = uiState as BookUiState.Empty
 
-            val (actionText, onAction) = when (emptyUiState.action) {
-                EmptyAction.ADD_BOOK -> stringResource(R.string.add_book) to { viewModel.showAddSheet() }
-                EmptyAction.RESTART_SESSION -> stringResource(R.string.reload_books) to { viewModel.restartSession() }
+            val (gifRes, actionText, onAction) = when (emptyUiState.action) {
+                EmptyAction.ADD_BOOK -> Triple(
+                    R.raw.estante_vazia,
+                    stringResource(R.string.add_book)
+                ) { viewModel.showAddSheet() }
+
+                EmptyAction.RESTART_SESSION -> Triple(
+                    R.raw.estante_cheia,
+                    stringResource(R.string.reload_books)
+                ) { viewModel.restartSession() }
             }
 
             EmptyState(
                 message = emptyUiState.message,
+                gifRes = gifRes,
                 actionText = actionText,
                 onAction = onAction,
             )

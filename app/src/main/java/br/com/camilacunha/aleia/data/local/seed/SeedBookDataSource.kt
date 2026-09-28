@@ -31,6 +31,6 @@ class SeedBookDataSource(
     }
 
     private companion object {
-        const val FILE_NAME = "books.json"
+        const val FILE_NAME = "books_mock.json" //trocar para json real
     }
 }
