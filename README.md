@@ -20,7 +20,7 @@ O **Aleia** resolve um problema bem específico: escolher o próximo livro quand
 
 | Loading | Estado vazio | Erro |
 |:---:|:---:|:---:|
-| <img width="376" height="837" alt="image" src="<img width="381" height="821" alt="image" src="https://github.com/user-attachments/assets/e651e3df-8cf6-410c-9d70-51c1ad32828f" /> | <img width="377" height="838" alt="image" src="<img width="377" height="818" alt="image" src="https://github.com/user-attachments/assets/8854e893-35c8-4042-ac82-6f928464ad6b" /> | <img width="377" height="831" alt="image" src="<img width="376" height="813" alt="image" src="https://github.com/user-attachments/assets/9d7f6e56-6039-48d0-b3a0-4638b873920a" /> |
+| <img width="381" height="821" alt="image" src="https://github.com/user-attachments/assets/e651e3df-8cf6-410c-9d70-51c1ad32828f" /> | <img width="377" height="818" alt="image" src="https://github.com/user-attachments/assets/8854e893-35c8-4042-ac82-6f928464ad6b" /> | <img width="376" height="813" alt="image" src="https://github.com/user-attachments/assets/9d7f6e56-6039-48d0-b3a0-4638b873920a" /> |
 
 ---
 
